@@ -1,7 +1,15 @@
 package main
 
+import (
+	"regexp"
+)
+
 func main() {
 
+	check_regexp()
+}
+
+func check() {
 	var arr1 = []bool{
 		true, true, true, false,
 		true, true, true, true,
@@ -23,4 +31,12 @@ func CountSheeps(numbers []bool) int {
 		}
 	}
 	return result
+}
+
+func check_regexp() {
+	println(ReplaceDots("one.two.three"))
+}
+
+func ReplaceDots(str string) string {
+	return regexp.MustCompile("\\.").ReplaceAllString(str, "-")
 }
